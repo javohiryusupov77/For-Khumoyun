@@ -12,9 +12,10 @@ const Main = () => {
         <h1 className="text-5xl font-bold">
           2024-2025 O'QUV YILI <br /> UCHUN QABUL BOSHLANDI
         </h1>
-        <button id="main" className="mt-6 px-8 py-6 bg-blue-600 rounded hover:bg-blue-700">
+        <button className="my-6 px-8 py-6 bg-blue-600 rounded hover:bg-blue-700">
           TALABA BO'LISH
         </button>
+        <br />
       </div>
     </div>
   );

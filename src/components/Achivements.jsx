@@ -34,11 +34,11 @@ const achievementsList = [
 
 const Achievements = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16 px-4">
       <h1 className="text-3xl font-extrabold text-center mb-8">
         Our Achievements
       </h1>
-      <div className="flex flex-wrap justify-center items-center gap-8">
+      <div className="col-span-1">
         {achievementsList.map((achievement, index) => {
           return (
             <div
