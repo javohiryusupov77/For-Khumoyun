@@ -15,7 +15,6 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    prefix: "~",
     metric: "Students",
     value: "500",
     postfix: "+",
@@ -34,7 +33,7 @@ const achievementsList = [
 
 const Achievements = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-1 text-black py-16 px-4">
       <h1 className="text-3xl font-extrabold text-center mb-8">
         Our Achievements
       </h1>
@@ -51,7 +50,7 @@ const Achievements = () => {
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white"
+                  className="text-black"
                   configs={(_, index) => {
                     return {
                       mass: 1,
@@ -62,7 +61,7 @@ const Achievements = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-gray-300 text-lg text-center mt-2">
+              <p className="text-black text-lg text-center mt-2">
                 {achievement.metric}
               </p>
             </div>
