@@ -62,7 +62,7 @@ const RegisterForm = () => {
           type="submit"
           className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 shadow-md transform hover:scale-105"
         >
-          Submit
+          Ariza Qoldirish
         </button>
       </form>
     </div>
