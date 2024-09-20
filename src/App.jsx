@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import MainPage from "./page/MainPage";
 import PageTitle from "./components/PageTitle";
 import NotFoundPage from "./page/NotFoundPage";
-import RegisterForm from "./components/RegisterForm";
 
 function Layout({ children }) {
   const location = useLocation();
