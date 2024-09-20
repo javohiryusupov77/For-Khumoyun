@@ -10,13 +10,13 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Ta'lim yo'nalishlari",
+    metric: "Educational directions",
     value: "12",
     postfix: "+",
   },
   {
     prefix: "~",
-    metric: "Talabalar",
+    metric: "Students",
     value: "500",
     postfix: "+",
   },
