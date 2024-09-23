@@ -4,27 +4,22 @@ const RegisterForm = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setName("");
-    setNumber("");
-    Swal.fire("Siz bilan tez orada bog'lanishadi.");
-       const form = event.currentTarget;
-       const formData = new FormData(form);
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   setName("");
+   setNumber("");
+   Swal.fire("Siz bilan tez orada bog'lanishadi.");
 
-       const formUrl =
-         "https://script.google.com/macros/s/AKfycbyZbUvxx1cac0meOL3a3a_232WHYwLgS8kzf8uE5mKQNpnZaZ8Y45veqLfCVNp1Q25qww/exec";
-       try {
-         fetch(formUrl, {
-           method: "POST",
-           body: formData,
-         });
-         // showPopup()
-       } catch (error) {
-         console.error("Error submitting form:", error);
-       }
+   const formData = new FormData(e.currentTarget); // Fixed this line
 
-  };
+   const formUrl =
+     "https://script.google.com/macros/s/AKfycbyZbUvxx1cac0meOL3a3a_232WHYwLgS8kzf8uE5mKQNpnZaZ8Y45veqLfCVNp1Q25qww/exec";
+   fetch(formUrl, {
+     method: "POST",
+     body: formData,
+   }).catch((error) => console.error("Error submitting form:", error));
+ };
+
 
   return (
     <>
