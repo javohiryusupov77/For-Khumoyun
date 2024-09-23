@@ -1,25 +1,29 @@
-import React, { useState } from "react";
-import Swal from "sweetalert2";
+import { useState } from "react";
 const RegisterForm = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
- const handleSubmit = (e) => {
-   e.preventDefault();
-   setName("");
-   setNumber("");
-   Swal.fire("Siz bilan tez orada bog'lanishadi.");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-   const formData = new FormData(e.currentTarget); // Fixed this line
+    setName("");
+    setNumber("");
 
-   const formUrl =
-     "https://script.google.com/macros/s/AKfycbyZbUvxx1cac0meOL3a3a_232WHYwLgS8kzf8uE5mKQNpnZaZ8Y45veqLfCVNp1Q25qww/exec";
-   fetch(formUrl, {
-     method: "POST",
-     body: formData,
-   }).catch((error) => console.error("Error submitting form:", error));
- };
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
+    const formUrl =
+      "https://script.google.com/macros/s/AKfycbyZbUvxx1cac0meOL3a3a_232WHYwLgS8kzf8uE5mKQNpnZaZ8Y45veqLfCVNp1Q25qww/exec";
+    try {
+      fetch(formUrl, {
+        method: "POST",
+        body: formData,
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+
+  };
 
   return (
     <>
@@ -29,7 +33,7 @@ const RegisterForm = () => {
           className="bg-white p-10 rounded-lg shadow-xl w-full max-w-sm transition-transform transform hover:scale-105 duration-300"
         >
           <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-            Imkoniyatni qo'ldan boy bermang, talaba bo'ling
+            Imkoniyatni qoldan boy bermang, talaba boling
           </h2>
 
           <div className="mb-4">
@@ -41,6 +45,7 @@ const RegisterForm = () => {
             </label>
             <input
               id="name"
+              name="first_name"
               type="text"
               required
               value={name}
@@ -59,6 +64,7 @@ const RegisterForm = () => {
             </label>
             <input
               id="number"
+              name="phone_number"
               type="text"
               required
               value={number}
