@@ -5,13 +5,10 @@ const RegisterForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     setName("");
     setNumber("");
-
     const form = event.currentTarget;
     const formData = new FormData(form);
-
     const formUrl =
       "https://script.google.com/macros/s/AKfycbyZbUvxx1cac0meOL3a3a_232WHYwLgS8kzf8uE5mKQNpnZaZ8Y45veqLfCVNp1Q25qww/exec";
     try {
