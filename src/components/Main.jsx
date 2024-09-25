@@ -12,10 +12,11 @@ const Main = () => {
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
           2024-2025 O'QUV YILI <br /> UCHUN QABUL BOSHLANDI
         </h1>
-
-        <button id="name" className="my-4 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-sm sm:text-base">
-          TALABA BO'LISH
-        </button>
+        <a href="#about">
+          <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition-colors">
+            TALABA BO'LISH
+          </button>
+        </a>
       </div>
     </div>
   );

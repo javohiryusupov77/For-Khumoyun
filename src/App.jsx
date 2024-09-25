@@ -5,8 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import MainPage from "./page/MainPage";
+  import MainPage from "./page/MainPage";
 import PageTitle from "./components/PageTitle";
 import NotFoundPage from "./page/NotFoundPage";
 
@@ -22,7 +21,6 @@ function Layout({ children }) {
           <div className="w-full max-w-[1440px]">{children}</div>
         </div>
       </div>
-      {!isNotFound && <Footer />}
     </div>
   );
 }

@@ -19,13 +19,13 @@ const RegisterForm = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
     }
-
   };
 
   return (
     <>
       <div className="flex justify-center items-center h-screen">
         <form
+          id="about"
           onSubmit={handleSubmit}
           className="bg-white p-10 rounded-lg shadow-xl w-full max-w-sm transition-transform transform hover:scale-105 duration-300"
         >
